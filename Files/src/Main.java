@@ -1,15 +1,16 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        LocalDate dataAtual = LocalDate.now();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        TarefaSimples sub1 = new TarefaSimples("Comprar tinta", "Ir à loja", dataAtual, "Pendente", dataAtual);
+        TarefaSimples sub2 = new TarefaSimples("Pintar parede", "Usar tinta azul", dataAtual, "Em aberto", dataAtual);
+
+        TarefaComSubtarefas tarefa = new TarefaComSubtarefas("Testando", "estou a testar", dataAtual, "sla");
+        tarefa.addSubtarefa(sub1);
+        tarefa.addSubtarefa(sub2);
+
+        tarefa.exibirDetalhes();
     }
 }

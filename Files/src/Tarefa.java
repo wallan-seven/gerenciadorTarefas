@@ -3,7 +3,7 @@ import java.time.LocalDate;
 public class Tarefa {
     private String titulo;
     private String descricao;
-    private LocalDate dataCriacao;
+    private LocalDate dataCriacao; /*quem sabe colocar os segundos*/
     private String status;
 
     public Tarefa (String titulo, String descricao, LocalDate dataCriacao, String status){
@@ -46,12 +46,12 @@ public class Tarefa {
     }
 
     public void exibirDetalhes(){
-        System.out.printf("TAREFA: " + getTitulo());
-        System.out.print("\n--------------------------\n");
-        System.out.printf("DESCRIÇÃO:\n " + getDescricao());
-        System.out.print("\n--------------------------\n");
-        System.out.print("\n--------------------------\n");
-        System.out.printf("DATA CRIAÇÂO:\n " + getDataCriacao());
-        System.out.printf("STATUS:\n " + getStatus());
+        System.out.printf("TAREFA:\n     " + getTitulo());
+        System.out.print("\n---------------------\n");
+        System.out.printf("DESCRIÇÃO:\n     " + getDescricao());
+        System.out.print("\n---------------------\n");
+        System.out.printf("DATA CRIAÇÂO:\n     " + getDataCriacao());
+        System.out.printf("\nSTATUS:\n     " + getStatus());
+        System.out.print("\n");
     }
 }
